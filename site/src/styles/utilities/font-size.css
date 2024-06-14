@@ -1,0 +1,31 @@
+.fs--2 {
+  font-size: var(--step--2);
+}
+
+.fs--1 {
+  font-size: var(--step--1);
+}
+
+.fs-0 {
+  font-size: var(--step-0);
+}
+
+.fs-1 {
+  font-size: var(--step-1);
+}
+
+.fs-2 {
+  font-size: var(--step-2);
+}
+
+.fs-3 {
+  font-size: var(--step-3);
+}
+
+.fs-4 {
+  font-size: var(--step-4);
+}
+
+.fs-5 {
+  font-size: var(--step-5);
+}

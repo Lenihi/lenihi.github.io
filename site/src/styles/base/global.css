@@ -1,0 +1,13 @@
+body {
+  line-height: 1.5;
+  font-family: var(--font-serif);
+  font-size: var(--step-0);
+  background: var(--clr-surface);
+  color: var(--clr-text);
+  display: grid;
+  max-width: clamp(min(100% - var(--space-s), 20rem), 75vw, 80rem);
+  margin-inline: auto;
+  grid-template-columns: 1fr 66ch 1fr 1fr;
+  grid-auto-flow: column;
+  padding-inline: var(--space-m);
+}

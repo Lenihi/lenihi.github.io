@@ -1,0 +1,103 @@
+---
+import { getCollection } from "astro:content";
+import config from "config.json";
+import { mainRoutes, subRoutes } from "src/libs/routes.ts";
+
+export type Props = {
+  current?: keyof typeof mainRoutes;
+  currentSlug?: string;
+};
+
+const { current, currentSlug } = Astro.props;
+const projects = await getCollection("projects");
+const instants = await getCollection("instants");
+---
+
+<header>
+  <a href="/" class="title">{config.title}</a>
+  <span aria-hidden="true" class="decorator"
+    >- - - - - - - - - - - - - - - - - - - - - --- - - - - ----->>>>>></span
+  >
+  <nav aria-label="Navigation principale" class="primary-nav">
+    <ul role="list">
+      <li>
+        <a href={mainRoutes.home} aria-current={current === "home"}
+          >{config.navigation.home.label}</a
+        >
+      </li>
+      <li>
+        <a href={mainRoutes.projects} aria-current={current === "projects"}
+          >{config.navigation.projects.label}</a
+        >
+      </li>
+      <li>
+        <a href={mainRoutes.instants} aria-current={current === "instants"}
+          >{config.navigation.instants.label}</a
+        >
+      </li>
+      <li>
+        <a href={mainRoutes.about} aria-current={current === "about"}
+          >{config.navigation.about.label}</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <nav aria-label={config.navigation.projects.label} class="secondary-nav">
+    <ul role="list">
+      {
+        current === "projects" &&
+          projects.map((el) => (
+            <li>
+              <a
+                href={subRoutes.projectsItem(el.slug)}
+                aria-current={el.slug === currentSlug}
+              >
+                {el.data.title}
+              </a>{" "}
+            </li>
+          ))
+      }
+      {
+        current === "instants" &&
+          instants.map((el) => (
+            <li>
+              <a
+                href={subRoutes.instantsItem(el.slug)}
+                aria-current={el.slug === currentSlug}
+              >
+                {el.data.title}
+              </a>{" "}
+            </li>
+          ))
+      }
+    </ul>
+  </nav>
+</header>
+
+<style>
+  header {
+    grid-column: 1/ -1;
+    padding-block: var(--space-2xl);
+  }
+  .title {
+    font-size: var(--step-1);
+  }
+  nav ul {
+    display: flex;
+    gap: var(--space-l);
+  }
+  .decorator {
+    display: block;
+    margin-block-start: var(--space-3xl);
+  }
+  .primary-nav {
+    margin-block-start: 1em;
+  }
+  .secondary-nav {
+    margin-block-start: var(--space-xl);
+    padding-inline-start: var(--space-l);
+  }
+  a[aria-current] {
+    text-decoration: underline wavy var(--clr-accent);
+  }
+</style>

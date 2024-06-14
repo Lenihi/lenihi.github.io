@@ -1,0 +1,28 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection, getEntry } from "astro:content";
+import config from "config.json";
+import MainLayout from "src/layouts/MainLayout.astro";
+import { slugify } from "src/libs/string.ts";
+
+const { slug } = Astro.params;
+
+const { data, render } = await getEntry("instants", slug);
+
+const { Content } = await render();
+
+export const getStaticPaths = (async () => {
+  const instants = await getCollection("instants");
+  return instants.map((el) => ({
+    params: {
+      instants: slugify(config.navigation.instants.url),
+      slug: el.slug,
+    },
+  }));
+}) satisfies GetStaticPaths;
+---
+
+<MainLayout current="instants" currentSlug={slug}>
+  <h1>{data.title}</h1>
+  <Content />
+</MainLayout>

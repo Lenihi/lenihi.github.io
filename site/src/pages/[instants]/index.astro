@@ -1,0 +1,19 @@
+---
+import type { GetStaticPaths } from "astro";
+import MainLayout from "src/layouts/MainLayout.astro";
+import { mainRoutes } from "src/libs/routes.ts";
+
+export const getStaticPaths = (() => {
+  return [
+    {
+      params: {
+        instants: mainRoutes.instants,
+      },
+    },
+  ];
+}) satisfies GetStaticPaths;
+---
+
+<MainLayout current="instants">
+  <h1>Instants</h1>
+</MainLayout>

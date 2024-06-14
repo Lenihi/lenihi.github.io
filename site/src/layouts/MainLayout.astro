@@ -1,0 +1,23 @@
+---
+import Header from "src/components/Header.astro";
+import BaseLayout from "./BaseLayout.astro";
+import type { mainRoutes } from "src/libs/routes.ts";
+export type Props = {
+  current?: keyof typeof mainRoutes;
+  currentSlug?: string;
+};
+const { current, currentSlug } = Astro.props;
+---
+
+<BaseLayout>
+  <Header current={current} currentSlug={currentSlug} />
+  <main>
+    <slot />
+  </main>
+</BaseLayout>
+
+<style>
+  main {
+    grid-column: 2;
+  }
+</style>
