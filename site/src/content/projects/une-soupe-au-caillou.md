@@ -1,5 +1,5 @@
 ---
-title: Une soupe au caillou
+title: /__Une soupe au caillou__
 date: 2021-01-01
 priority: 0
 ---
