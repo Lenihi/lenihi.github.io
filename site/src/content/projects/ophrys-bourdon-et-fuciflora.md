@@ -1,0 +1,16 @@
+---
+title: /__ Ophrys bourdon et Fuciflora __
+date: 2018-01-01
+priority: 0
+---
+Performance en collaboration avec Elena Guérin, 30’\
+Création en co-production avec MAGCP Centre d’art dans le cadre du festival de performance La Traversée, Cajarc
+
+*Ophrys bourdon et Fuciflora* est une émission de radio qui se déroule en direct sur *Tranceculture*.\
+Sur le plateau se trouvent la présentatrice et l’invitée Margaret, auteure du célèbre ouvrage *Le monde est\
+sensuel et nous sommes frigides*. Dans un échange drolatique, elles cherchent à adopter le point de vue des\
+végétaux, animaux et minéraux, dans ce futur ou la seule solution envisageable pour maintenir l’équilibre de\
+l’écosystème serait d’entrer en collaboration avec les autres règnes.
+
+[> Extrait de l’émission #1 (audio) du 13 avril 2019](https://vimeo.com/334273641)\
+[> Extrait de l’émission #2 (vidéo) du 7 septembre 2019 (interprète : Victor Guillon)](https://vimeo.com/364245853)
