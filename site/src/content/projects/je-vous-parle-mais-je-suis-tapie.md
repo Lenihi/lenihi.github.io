@@ -8,7 +8,7 @@ Performance, 30’\
 S’inscrit dans la balade *Le Sens de la Pente #1* organisée par la Coopérative Hotel du Nord dans le cadre du projet *Non Site On Site*\
 La Nerthe (Marseille 16ème)
 
-*« Je vous parle par petits mots pour que nous soyons intimes. J’aimerais vous parler à l’oreille, mais il y en a beaucoup. J’aimerais que les plantes aussi me chuchotent, un début de sensation.\
-À tout à l’heure.»*
+> Je vous parle par petits mots pour que nous soyons intimes. J’aimerais vous parler à l’oreille, mais il y en a beaucoup. J’aimerais que les plantes aussi me chuchotent, un début de sensation.\
+> À tout à l’heure.
 
 Après avoir distribué un texte d’introduction, je déploie mes pensées en lien à l’espace que nous traversons sur de petits papiers, que je dépose au sol au fur et à mesure de notre parcours dans la réserve de chasse de LA MYRTHE. Nous marchons dans des zones composites, résultats d’un travail indissociable de l’humain et des autres terrestres. Pour arriver dans la pinède, nous passons près de la cabane d’affût. Ici beaucoup d’êtres ont attendus, aux aguets. L’attention décuplée par la chasse ou la fuite. Quelque part, je les sens. Je me soustrais. L’omniscience me guette, ou la disparition.
