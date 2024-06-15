@@ -12,7 +12,7 @@ export default config({
     projects: collection({
       label: "Projects",
       slugField: "title",
-      columns: ["title", "date"],
+      columns: ["priority", "date"],
       path: "src/content/projects/*",
       format: { contentField: "content" },
       entryLayout: "content",
@@ -42,7 +42,7 @@ export default config({
     instants: collection({
       label: "Instants",
       slugField: "title",
-      columns: ["title", "date"],
+      columns: ["priority", "date"],
       path: "src/content/instants/*",
       format: { contentField: "content" },
       entryLayout: "content",
