@@ -16,10 +16,29 @@ const next = projects[currentIndex + 1]?.slug;
 ---
 
 <nav>
-  {previous && <a href={subRoutes.projectsItem(previous)}>&lt;&lt;</a>}
+  {
+    previous && (
+      <a
+        href={
+          collection === "projects"
+            ? subRoutes.projectsItem(previous)
+            : subRoutes.instantsItem(previous)
+        }
+      >
+        &lt;&lt;
+      </a>
+    )
+  }
   {
     next && (
-      <a href={subRoutes.projectsItem(next)} class="next">
+      <a
+        href={
+          collection === "projects"
+            ? subRoutes.projectsItem(next)
+            : subRoutes.instantsItem(next)
+        }
+        class="next"
+      >
         &gt;&gt;
       </a>
     )
