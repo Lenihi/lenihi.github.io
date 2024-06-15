@@ -1,4 +1,9 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
+import remarkUnwrapImages from "remark-unwrap-images";
 
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  markdown: {
+    remarkPlugins: [remarkUnwrapImages],
+  },
+});
