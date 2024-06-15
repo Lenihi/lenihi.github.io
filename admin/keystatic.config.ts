@@ -18,7 +18,7 @@ export default config({
         title: fields.slug({ name: { label: "Title" } }),
         date: fields.date({ label: "Date", validation: { isRequired: true } }),
         priority: fields.number({
-          label: "Number",
+          label: "Priorité",
           validation: { isRequired: true },
           defaultValue: 0,
         }),
@@ -46,7 +46,7 @@ export default config({
         title: fields.slug({ name: { label: "Title" } }),
         date: fields.date({ label: "Date", validation: { isRequired: true } }),
         priority: fields.number({
-          label: "Number",
+          label: "Priorité",
           validation: { isRequired: true },
           defaultValue: 0,
         }),
