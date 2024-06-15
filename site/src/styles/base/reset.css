@@ -15,6 +15,7 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 input,
@@ -39,9 +40,4 @@ ul[role="list"],
 ol[role="list"] {
   list-style: none;
   padding: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
