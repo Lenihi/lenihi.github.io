@@ -1,4 +1,4 @@
-import { config, fields, collection } from "@keystatic/core";
+import { config, fields, collection, singleton } from "@keystatic/core";
 
 export default config({
   storage: {
@@ -66,6 +66,19 @@ export default config({
               publicPath: "src/assets/images/instants/",
             },
           },
+        }),
+      },
+    }),
+  },
+  singletons: {
+    settings: singleton({
+      label: "Réglages",
+      path: "/config.json",
+      format: "json",
+      schema: {
+        title: fields.text({
+          label: "Titre",
+          validation: { isRequired: true },
         }),
       },
     }),
