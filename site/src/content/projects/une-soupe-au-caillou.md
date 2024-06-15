@@ -42,3 +42,5 @@ Je propose aux participant.e.s de tirer dans la pioche un élément du bouillon 
 > Nous sommes dans la soupe.
 
 Crédits photos Grégoire Edouard
+
+![](src/assets/images/projects/une-soupe-au-caillou/1_DSC01874_0-1024x684.jpg)
