@@ -1,0 +1,40 @@
+---
+import type { ContentCollectionKey } from "astro:content";
+import { getCollection } from "astro:content";
+import { subRoutes } from "src/libs/routes.ts";
+
+export type Props = {
+  collection: ContentCollectionKey;
+  slug: string;
+};
+
+const { collection, slug } = Astro.props;
+const projects = await getCollection(collection);
+const currentIndex = projects.findIndex((el) => el.slug === slug);
+const previous = projects[currentIndex - 1]?.slug;
+const next = projects[currentIndex + 1]?.slug;
+---
+
+<nav>
+  {previous && <a href={subRoutes.projectsItem(previous)}>&lt;&lt;</a>}
+  {
+    next && (
+      <a href={subRoutes.projectsItem(next)} class="next">
+        &gt;&gt;
+      </a>
+    )
+  }
+</nav>
+
+<style>
+  nav {
+    display: flex;
+  }
+  nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .next {
+    margin-inline-start: auto;
+  }
+</style>
