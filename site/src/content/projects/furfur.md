@@ -3,9 +3,8 @@ title: /__Furfur
 date: 2022-07-14
 priority: 100
 ---
-
 Performance audio-guidée
-Lors de _Futurs possibles_, soirée annuelle du 14 juillet,
+Lors de *Futurs possibles*, soirée annuelle du 14 juillet,
 3bisf lieu d’arts contemporain, Aix-en-provence
 
 Furfur est une déambulation nocturne dans les rues de l’hôpital Montperrin. Les participant·e·s téléphonaient et la voix les attendait au bout du fil. Petits cailloux et leds semées indiquaient le chemin à suivre.
@@ -25,6 +24,8 @@ Par le texte où se mêlaient descriptions, situations, matières oniriques, je 
 >
 > \~ à bientôt, dans le furfur \~
 
-_Crédits photo : Silvio Milone, Aliette Cosset_
+*Crédits photo : Silvio Milone, Aliette Cosset*
 
 ![](src/assets/images/projects/furfur/0.jpg)
+
+![](src/assets/images/projects/furfur/1.jpg)![](src/assets/images/projects/furfur/2.jpg)![](src/assets/images/projects/furfur/3.jpg)
