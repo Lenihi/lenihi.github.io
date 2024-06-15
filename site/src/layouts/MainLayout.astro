@@ -11,7 +11,7 @@ const { current, currentSlug } = Astro.props;
 
 <BaseLayout>
   <Header current={current} currentSlug={currentSlug} />
-  <main>
+  <main class="flow">
     <slot />
   </main>
 </BaseLayout>
@@ -19,5 +19,6 @@ const { current, currentSlug } = Astro.props;
 <style>
   main {
     grid-column: 2;
+    padding-block: var(--space-l);
   }
 </style>
