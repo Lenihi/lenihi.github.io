@@ -28,4 +28,8 @@ Par le texte où se mêlaient descriptions, situations, matières oniriques, je 
 
 ![](src/assets/images/projects/furfur/0.jpg)
 
-![](src/assets/images/projects/furfur/1.jpg)![](src/assets/images/projects/furfur/2.jpg)![](src/assets/images/projects/furfur/3.jpg)
+![](src/assets/images/projects/furfur/1.jpg)
+
+![](src/assets/images/projects/furfur/2.jpg)
+
+![](src/assets/images/projects/furfur/3.jpg)
