@@ -3,8 +3,9 @@ title: /__Furfur
 date: 2022-07-14
 priority: 100
 ---
+
 Performance audio-guidée
-Lors de *Futurs possibles*, soirée annuelle du 14 juillet,
+Lors de _Futurs possibles_, soirée annuelle du 14 juillet,
 3bisf lieu d’arts contemporain, Aix-en-provence
 
 Furfur est une déambulation nocturne dans les rues de l’hôpital Montperrin. Les participant·e·s téléphonaient et la voix les attendait au bout du fil. Petits cailloux et leds semées indiquaient le chemin à suivre.
@@ -17,13 +18,13 @@ Par le texte où se mêlaient descriptions, situations, matières oniriques, je 
 > ou à la vigilance
 > qu’ici les ombres ne doivent pas prendre le pas sur la lumière.
 > De fait,
-> toute activité parait suspecte
+> toute activité parait suspecte…
 >
-> …J’ai suivi un chat roux avec une tête de sphinx,
+> J’ai suivi un chat roux avec une tête de sphinx,
 > qui a disparu à une intersection, après m’avoir sondé intensément comme pour déterminer la raison de ma présence tardive. »
+>
+> \~ à bientôt, dans le furfur \~
 
-\~ à bientôt, dans le furfur \~
-
-*Crédits photo : Silvio Milone, Aliette Cosset*
+_Crédits photo : Silvio Milone, Aliette Cosset_
 
 ![](src/assets/images/projects/furfur/0.jpg)
