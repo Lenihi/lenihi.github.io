@@ -16,3 +16,7 @@ blockquote {
   padding-inline: var(--space-xs);
   font-style: italic;
 }
+
+blockquote > * + * {
+  margin-block-start: 1em;
+}
