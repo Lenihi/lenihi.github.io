@@ -1,5 +1,5 @@
 ---
-title: /__Furfur
+title: /__Furfur__
 date: 2022-07-14
 priority: 100
 ---
