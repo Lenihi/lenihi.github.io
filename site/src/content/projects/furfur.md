@@ -19,7 +19,7 @@ Par le texte où se mêlaient descriptions, situations, matières oniriques, je 
 > De fait,
 > toute activité parait suspecte…
 >
-> J’ai suivi un chat roux avec une tête de sphinx,
+> J’ai suivi un chat roux avec une tête de sphinx,\
 > qui a disparu à une intersection, après m’avoir sondé intensément comme pour déterminer la raison de ma présence tardive. »
 >
 > \~ à bientôt, dans le furfur \~
