@@ -73,13 +73,55 @@ export default config({
   singletons: {
     settings: singleton({
       label: "Réglages",
-      path: "/config.json",
+      path: "/config",
       format: "json",
       schema: {
         title: fields.text({
           label: "Titre",
           validation: { isRequired: true },
         }),
+        metaDescription: fields.text({
+          label: "Description du site",
+          validation: { isRequired: true },
+          multiline: true,
+        }),
+        favicon: fields.image({
+          label: "Favicon",
+          directory: "/public",
+          publicPath: "/",
+        }),
+        navigation: fields.object(
+          {
+            home: fields.object(
+              {
+                label: fields.text({ label: "Label" }),
+              },
+              { label: "Home" }
+            ),
+            projects: fields.object(
+              {
+                label: fields.text({ label: "Label" }),
+                url: fields.text({ label: "Url" }),
+              },
+              { label: "Projets" }
+            ),
+            instants: fields.object(
+              {
+                label: fields.text({ label: "Label" }),
+                url: fields.text({ label: "Url" }),
+              },
+              { label: "Instants" }
+            ),
+            about: fields.object(
+              {
+                label: fields.text({ label: "Label" }),
+                url: fields.text({ label: "Url" }),
+              },
+              { label: "about" }
+            ),
+          },
+          { label: "Navigation" }
+        ),
       },
     }),
   },
