@@ -71,6 +71,48 @@ export default config({
     }),
   },
   singletons: {
+    home: singleton({
+      label: "Home",
+      path: "src/content/pages/home",
+      format: { contentField: "content" },
+      entryLayout: "content",
+      schema: {
+        content: fields.mdx({
+          label: "Content",
+          extension: "md",
+          options: {
+            table: false,
+            code: false,
+            codeBlock: false,
+            image: {
+              directory: "src/assets/images/home",
+              publicPath: "src/assets/images/home/",
+            },
+          },
+        }),
+      },
+    }),
+    about: singleton({
+      label: "À propos",
+      path: "src/content/pages/about",
+      format: { contentField: "content" },
+      entryLayout: "content",
+      schema: {
+        content: fields.mdx({
+          label: "Content",
+          extension: "md",
+          options: {
+            table: false,
+            code: false,
+            codeBlock: false,
+            image: {
+              directory: "src/assets/images/about",
+              publicPath: "src/assets/images/about/",
+            },
+          },
+        }),
+      },
+    }),
     settings: singleton({
       label: "Réglages",
       path: "/config",
@@ -94,28 +136,49 @@ export default config({
           {
             home: fields.object(
               {
-                label: fields.text({ label: "Label" }),
+                label: fields.text({
+                  label: "Label",
+                  validation: { isRequired: true },
+                }),
               },
               { label: "Home" }
             ),
             projects: fields.object(
               {
-                label: fields.text({ label: "Label" }),
-                url: fields.text({ label: "Url" }),
+                label: fields.text({
+                  label: "Label",
+                  validation: { isRequired: true },
+                }),
+                url: fields.text({
+                  label: "Url",
+                  validation: { isRequired: true },
+                }),
               },
               { label: "Projets" }
             ),
             instants: fields.object(
               {
-                label: fields.text({ label: "Label" }),
-                url: fields.text({ label: "Url" }),
+                label: fields.text({
+                  label: "Label",
+                  validation: { isRequired: true },
+                }),
+                url: fields.text({
+                  label: "Url",
+                  validation: { isRequired: true },
+                }),
               },
               { label: "Instants" }
             ),
             about: fields.object(
               {
-                label: fields.text({ label: "Label" }),
-                url: fields.text({ label: "Url" }),
+                label: fields.text({
+                  label: "Label",
+                  validation: { isRequired: true },
+                }),
+                url: fields.text({
+                  label: "Url",
+                  validation: { isRequired: true },
+                }),
               },
               { label: "about" }
             ),
