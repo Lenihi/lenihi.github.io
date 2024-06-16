@@ -25,7 +25,8 @@ const next = projects[currentIndex + 1]?.slug;
             : subRoutes.instantsItem(previous)
         }
       >
-        &lt;&lt;
+        <span class="sr-only">précédent</span>
+        <span aria-hidden="true">&lt;&lt;</span>
       </a>
     )
   }
@@ -39,7 +40,8 @@ const next = projects[currentIndex + 1]?.slug;
         }
         class="next"
       >
-        &gt;&gt;
+        <span class="sr-only">suivant</span>
+        <span aria-hidden="true">&gt;&gt;</span>
       </a>
     )
   }

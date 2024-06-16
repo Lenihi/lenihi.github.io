@@ -16,7 +16,7 @@ export const mainRoutes = {
 };
 
 export const subRoutes = {
-  instantsItem: async (slug: string) =>
+  instantsItem: (slug: string) =>
     `/${slugify(navigation.instants.url)}/${slugify(slug)}`,
   projectsItem: (slug: string) =>
     `/${slugify(navigation.projects.url)}/${slugify(slug)}`,

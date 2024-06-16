@@ -2,15 +2,32 @@
 import Header from "src/components/Header.astro";
 import type { mainRoutes } from "src/libs/routes.ts";
 import BaseLayout from "./BaseLayout.astro";
+import { getEntry } from "astro:content";
+import { Image } from "astro:assets";
+
 export type Props = {
   current?: keyof typeof mainRoutes;
   currentSlug?: string;
 };
+const { data: config } = await getEntry("settings", "config");
+
 const { current, currentSlug } = Astro.props;
 ---
 
 <BaseLayout>
   <Header current={current} currentSlug={currentSlug} />
+  <aside>
+    <a href="/">
+      <span class="sr-only">Home</span>
+      <Image
+        src={config.imageMenu}
+        alt=""
+        width={96}
+        densities={[1.5, 2]}
+        aria-hidden="true"
+      />
+    </a>
+  </aside>
   <main class="flow">
     <slot />
   </main>
@@ -19,6 +36,14 @@ const { current, currentSlug } = Astro.props;
 <style>
   main {
     grid-column: 2;
-    padding-block: var(--space-l);
+    padding-block-start: var(--space-2xl);
+  }
+  aside {
+    grid-column: -2;
+  }
+  @media screen and (width < 55rem) {
+    aside {
+      display: none;
+    }
   }
 </style>
