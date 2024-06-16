@@ -14,7 +14,7 @@ const { data: config } = await getEntry("settings", "config");
     <meta name="description" content={config.metaDescription} />
     <title>{config.title}</title>
   </head>
-  <body>
-    <slot />
-  </body>
+  <slot />
+
+
 </html>

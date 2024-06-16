@@ -1,0 +1,32 @@
+<a href="#top" id="link-to-top">&uarr;</a>
+
+<script>
+  const init = () => {
+    const link = document.querySelector<HTMLAnchorElement>("a#link-to-top");
+    const header = document.querySelector<HTMLElement>("header");
+    if (!link || !header) return;
+    const observer = new IntersectionObserver((entries) => {
+      const [header] = entries;
+      if (header.intersectionRatio > 0) link.classList.remove("visible");
+      else link.classList.add("visible");
+    });
+    observer.observe(header);
+  };
+  init();
+</script>
+
+<style>
+  a {
+    opacity: 0;
+    position: fixed;
+    right: var(--space-l);
+    bottom: var(--space-l);
+    font-size: var(--step-3);
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.3s;
+  }
+  a:global(.visible) {
+    opacity: 1;
+  }
+</style>

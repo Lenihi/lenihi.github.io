@@ -4,6 +4,7 @@ import type { mainRoutes } from "src/libs/routes.ts";
 import BaseLayout from "./BaseLayout.astro";
 import { getEntry } from "astro:content";
 import { Image } from "astro:assets";
+import LinkToTop from "src/components/LinkToTop.astro";
 
 export type Props = {
   current?: keyof typeof mainRoutes;
@@ -15,35 +16,53 @@ const { current, currentSlug } = Astro.props;
 ---
 
 <BaseLayout>
-  <Header current={current} currentSlug={currentSlug} />
-  <aside>
-    <a href="/">
-      <span class="sr-only">Home</span>
-      <Image
-        src={config.imageMenu}
-        alt=""
-        width={96}
-        densities={[1.5, 2]}
-        aria-hidden="true"
-      />
-    </a>
-  </aside>
-  <main class="flow">
-    <slot />
-  </main>
+  <body>
+    <Header current={current} currentSlug={currentSlug} />
+    <aside>
+      <a href="/">
+        <span class="sr-only">Home</span>
+        <Image
+          src={config.imageMenu}
+          alt=""
+          width={96}
+          densities={[1.5, 2]}
+          aria-hidden="true"
+        />
+      </a>
+    </aside>
+    <main class="flow">
+      <slot />
+    </main>
+    <LinkToTop />
+  </body>
 </BaseLayout>
 
 <style>
+  body {
+    display: grid;
+    grid-template-columns:
+      [content-start wide-start] 1fr
+      [wide-end content-end aside-start] 3rem
+      [aside-end];
+    grid-auto-flow: column;
+    padding-inline: var(--space-s);
+    padding-block: var(--space-2xl);
+    max-width: clamp(min(100% - var(--space-s), 20rem), 90vw, 80rem);
+    margin-inline: auto;
+  }
+  @media screen and (width>50rem) {
+    body {
+      grid-template-columns:
+        [wide-start] 1fr [content-start] min(100%, 75ch)
+        [wide-end content-end] 1fr [aside-start] auto;
+    }
+  }
   main {
-    grid-column: 2;
+    grid-column: content;
     padding-block-start: var(--space-2xl);
   }
   aside {
-    grid-column: -2;
-  }
-  @media screen and (width < 55rem) {
-    aside {
-      display: none;
-    }
+    grid-column: aside;
+    grid-row: 1;
   }
 </style>
