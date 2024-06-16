@@ -2,6 +2,10 @@
 import type { GetStaticPaths } from "astro";
 import MainLayout from "src/layouts/MainLayout.astro";
 import { mainRoutes } from "src/libs/routes.ts";
+import { getEntry } from "astro:content";
+
+const about = await getEntry("pages", "about");
+const { Content } = await about.render();
 
 export const getStaticPaths = (() => {
   return [
@@ -15,5 +19,5 @@ export const getStaticPaths = (() => {
 ---
 
 <MainLayout current="about">
-  <h1>about</h1>
+  <Content />
 </MainLayout>

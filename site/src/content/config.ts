@@ -17,4 +17,7 @@ export const collections = {
       priority: z.number().optional(),
     }),
   }),
+  pages: defineCollection({
+    type: "content",
+  }),
 };
