@@ -115,7 +115,7 @@ export default config({
     }),
     settings: singleton({
       label: "Réglages",
-      path: "/config",
+      path: "/src/content/settings/config",
       format: "json",
       schema: {
         title: fields.text({
