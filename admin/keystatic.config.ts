@@ -132,6 +132,10 @@ export default config({
           directory: "/public",
           publicPath: "/",
         }),
+        imageMenu: fields.image({
+          label: "Image Menu",
+          directory: "src/assets/config",
+        }),
         navigation: fields.object(
           {
             home: fields.object(
