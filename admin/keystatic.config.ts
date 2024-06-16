@@ -135,6 +135,7 @@ export default config({
         imageMenu: fields.image({
           label: "Image Menu",
           directory: "src/assets/config",
+          publicPath: "src/assets/config",
         }),
         navigation: fields.object(
           {
