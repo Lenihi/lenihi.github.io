@@ -20,4 +20,31 @@ export const collections = {
   pages: defineCollection({
     type: "content",
   }),
+  settings: defineCollection({
+    type: "data",
+    schema: ({ image }) =>
+      z.object({
+        title: z.string(),
+        metaDescription: z.string(),
+        favicon: z.string().optional(),
+        imageMenu: image(),
+        navigation: z.object({
+          home: z.object({
+            label: z.string(),
+          }),
+          projects: z.object({
+            label: z.string(),
+            url: z.string(),
+          }),
+          instants: z.object({
+            label: z.string(),
+            url: z.string(),
+          }),
+          about: z.object({
+            label: z.string(),
+            url: z.string(),
+          }),
+        }),
+      }),
+  }),
 };

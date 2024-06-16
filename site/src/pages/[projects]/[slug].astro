@@ -1,7 +1,6 @@
 ---
 import type { GetStaticPaths } from "astro";
 import { getCollection, getEntry } from "astro:content";
-import config from "config.json";
 import Pagination from "src/components/Pagination.astro";
 import MainLayout from "src/layouts/MainLayout.astro";
 import { slugify } from "src/libs/string.ts";
@@ -11,6 +10,7 @@ const { data, render } = await getEntry("projects", slug);
 const { Content } = await render();
 
 export const getStaticPaths = (async () => {
+  const { data: config } = await getEntry("settings", "config");
   const items = await getCollection("projects");
   return items.map((el) => ({
     params: {

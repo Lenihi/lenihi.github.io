@@ -1,6 +1,8 @@
 ---
+import { getEntry } from "astro:content";
 import "src/styles/index.css";
-import config from "config.json";
+
+const { data: config } = await getEntry("settings", "config");
 ---
 
 <html lang="fr">

@@ -1,6 +1,8 @@
-import { navigation } from "config.json";
-import { slugify } from "./string.ts";
-import { getCollection, type CollectionEntry } from "astro:content";
+import { slugify } from "./string";
+import { getCollection, getEntry, type CollectionEntry } from "astro:content";
+
+const { data: config } = await getEntry("settings", "config");
+const navigation = config.navigation;
 
 export const mainRoutes = {
   home: "/",
@@ -14,7 +16,7 @@ export const mainRoutes = {
 };
 
 export const subRoutes = {
-  instantsItem: (slug: string) =>
+  instantsItem: async (slug: string) =>
     `/${slugify(navigation.instants.url)}/${slugify(slug)}`,
   projectsItem: (slug: string) =>
     `/${slugify(navigation.projects.url)}/${slugify(slug)}`,

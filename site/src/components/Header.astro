@@ -1,12 +1,14 @@
 ---
+import { getEntry } from "astro:content";
 import { getCollection } from "astro:content";
-import config from "config.json";
 import { mainRoutes, subRoutes } from "src/libs/routes.ts";
 
 export type Props = {
   current?: keyof typeof mainRoutes;
   currentSlug?: string;
 };
+
+const { data: config } = await getEntry("settings", "config");
 
 const { current, currentSlug } = Astro.props;
 const projects = await getCollection("projects");
