@@ -45,8 +45,8 @@ export default config({
                   validation: { isRequired: true },
                 }),
                 file: fields.file({
-                  directory: "/public/files",
-                  publicPath: "/files",
+                  directory: "/public/files/projects",
+                  publicPath: "/files/projects",
                   label: "Fichier",
                   validation: { isRequired: true },
                 }),
@@ -91,8 +91,8 @@ export default config({
                   validation: { isRequired: true },
                 }),
                 file: fields.file({
-                  directory: "/public/files",
-                  publicPath: "/files",
+                  directory: "/public/files/instants",
+                  publicPath: "/files/instants",
                   label: "Fichier",
                   validation: { isRequired: true },
                 }),
@@ -130,8 +130,8 @@ export default config({
                   validation: { isRequired: true },
                 }),
                 file: fields.file({
-                  directory: "/public/files",
-                  publicPath: "/files",
+                  directory: "/public/files/home",
+                  publicPath: "/files/home",
                   label: "Fichier",
                   validation: { isRequired: true },
                 }),
@@ -167,8 +167,8 @@ export default config({
                   validation: { isRequired: true },
                 }),
                 file: fields.file({
-                  directory: "/public/files",
-                  publicPath: "/files",
+                  directory: "/public/files/about",
+                  publicPath: "/files/about",
                   label: "Fichier",
                   validation: { isRequired: true },
                 }),
