@@ -1,4 +1,5 @@
 import { config, fields, collection, singleton } from "@keystatic/core";
+import { inline, mark } from "@keystatic/core/content-components";
 
 export default config({
   storage: {
@@ -34,6 +35,23 @@ export default config({
               directory: "src/assets/images/projects",
               publicPath: "src/assets/images/projects/",
             },
+          },
+          components: {
+            PdfLink: inline({
+              label: "Lien pdf",
+              schema: {
+                label: fields.text({
+                  label: "label",
+                  validation: { isRequired: true },
+                }),
+                file: fields.file({
+                  directory: "/public/files",
+                  publicPath: "",
+                  label: "Fichier",
+                  validation: { isRequired: true },
+                }),
+              },
+            }),
           },
         }),
       },
