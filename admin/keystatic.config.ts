@@ -26,7 +26,6 @@ export default config({
         }),
         content: fields.mdx({
           label: "Content",
-          extension: "md",
           options: {
             table: false,
             code: false,
@@ -56,7 +55,6 @@ export default config({
         }),
         content: fields.mdx({
           label: "Content",
-          extension: "md",
           options: {
             table: false,
             code: false,
@@ -79,7 +77,6 @@ export default config({
       schema: {
         content: fields.mdx({
           label: "Content",
-          extension: "md",
           options: {
             table: false,
             code: false,
@@ -100,7 +97,6 @@ export default config({
       schema: {
         content: fields.mdx({
           label: "Content",
-          extension: "md",
           options: {
             table: false,
             code: false,
