@@ -2,6 +2,7 @@
 import type { GetStaticPaths } from "astro";
 import { getCollection, getEntry } from "astro:content";
 import Pagination from "src/components/Pagination.astro";
+import PdfLink from "src/components/PdfLink.astro";
 import MainLayout from "src/layouts/MainLayout.astro";
 import { slugify } from "src/libs/string.ts";
 
@@ -24,5 +25,5 @@ export const getStaticPaths = (async () => {
 <MainLayout current="instants" currentSlug={slug}>
   <Pagination collection="instants" slug={slug} />
   <h1>{data.title}</h1>
-  <Content />
+  <Content components={{ PdfLink }} />
 </MainLayout>

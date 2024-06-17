@@ -46,7 +46,7 @@ export default config({
                 }),
                 file: fields.file({
                   directory: "/public/files",
-                  publicPath: "",
+                  publicPath: "/files",
                   label: "Fichier",
                   validation: { isRequired: true },
                 }),
@@ -82,6 +82,23 @@ export default config({
               publicPath: "src/assets/images/instants/",
             },
           },
+          components: {
+            PdfLink: inline({
+              label: "Lien pdf",
+              schema: {
+                label: fields.text({
+                  label: "label",
+                  validation: { isRequired: true },
+                }),
+                file: fields.file({
+                  directory: "/public/files",
+                  publicPath: "/files",
+                  label: "Fichier",
+                  validation: { isRequired: true },
+                }),
+              },
+            }),
+          },
         }),
       },
     }),
@@ -104,6 +121,23 @@ export default config({
               publicPath: "src/assets/images/home/",
             },
           },
+          components: {
+            PdfLink: inline({
+              label: "Lien pdf",
+              schema: {
+                label: fields.text({
+                  label: "label",
+                  validation: { isRequired: true },
+                }),
+                file: fields.file({
+                  directory: "/public/files",
+                  publicPath: "/files",
+                  label: "Fichier",
+                  validation: { isRequired: true },
+                }),
+              },
+            }),
+          },
         }),
       },
     }),
@@ -123,6 +157,23 @@ export default config({
               directory: "src/assets/images/about",
               publicPath: "src/assets/images/about/",
             },
+          },
+          components: {
+            PdfLink: inline({
+              label: "Lien pdf",
+              schema: {
+                label: fields.text({
+                  label: "label",
+                  validation: { isRequired: true },
+                }),
+                file: fields.file({
+                  directory: "/public/files",
+                  publicPath: "/files",
+                  label: "Fichier",
+                  validation: { isRequired: true },
+                }),
+              },
+            }),
           },
         }),
       },
