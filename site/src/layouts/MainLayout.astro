@@ -47,14 +47,14 @@ const { current, currentSlug } = Astro.props;
     grid-auto-flow: column;
     padding-inline: var(--space-s);
     padding-block: var(--space-2xl);
-    max-width: clamp(min(100% - var(--space-s), 20rem), 90vw, 80rem);
+    max-width: clamp(min(100% - var(--space-s), 20rem), 95vw, 80rem);
     margin-inline: auto;
   }
   @media screen and (width>50rem) {
     body {
       grid-template-columns:
-        [wide-start] 1fr [content-start] min(100%, 75ch)
-        [wide-end content-end] 1fr [aside-start] auto;
+        [wide-start] 1fr [content-start] 75ch
+        [wide-end content-end] 2fr [aside-start] auto;
     }
   }
   main {

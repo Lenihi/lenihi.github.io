@@ -93,10 +93,12 @@ const instants = await getCollection("instants");
   }
   .primary-nav li {
     display: inline-block;
-    padding-inline-end: var(--space-2xs);
+  }
+  .primary-nav li + li {
+    margin-inline-start: var(--space-s);
   }
   .secondary-nav {
-    margin-block-start: var(--space-m);
+    margin-block-start: var(--space-l);
     padding-inline-start: var(--space-s);
   }
   .secondary-nav li {
