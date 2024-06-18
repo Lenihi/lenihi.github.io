@@ -18,7 +18,7 @@ const instants = await getCollection("instants");
 <header class="top">
   <a href="/" class="title">{config.title}</a>
   <span aria-hidden="true" class="decorator"
-    >- - - - - - - - - - - - - - - - - --- - - - - ----->>>>>></span
+    >- - - - - - - - - - - - - --- - - - - ----->>>>>></span
   >
   <nav aria-label="Navigation principale" class="primary-nav">
     <ul role="list">
@@ -82,21 +82,22 @@ const instants = await getCollection("instants");
   }
   .title {
     font-size: var(--step-1);
+    text-decoration: none;
   }
   .decorator {
     display: block;
-    margin-block-start: var(--space-3xl);
+    margin-block-start: var(--space-xl);
   }
   .primary-nav {
     margin-block-start: 1em;
   }
   .primary-nav li {
     display: inline-block;
-    padding-inline: var(--space-2xs);
+    padding-inline-end: var(--space-2xs);
   }
   .secondary-nav {
-    margin-block-start: var(--space-l);
-    padding-inline-start: var(--space-l);
+    margin-block-start: var(--space-m);
+    padding-inline-start: var(--space-s);
   }
   .secondary-nav li {
     display: inline-block;
