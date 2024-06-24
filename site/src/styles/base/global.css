@@ -10,7 +10,7 @@ body {
 }
 
 blockquote {
-  padding-inline: var(--space-xs);
+  padding-inline: var(--space-s);
   font-style: italic;
 }
 
