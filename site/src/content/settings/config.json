@@ -1,7 +1,7 @@
 {
   "title": "Léna Hiriartborde",
-  "metaDescription": "Portfolio de l'artiste plasticienne Léna Hiriartborde.",
-  "favicon": "/favicon.svg",
+  "metaDescription": "Projets Portfolio de l'artiste plasticienne Léna Hiriartborde.",
+  "favicon": "/favicon.png",
   "imageMenu": "src/assets/config/imageMenu.jpg",
   "navigation": {
     "home": {
