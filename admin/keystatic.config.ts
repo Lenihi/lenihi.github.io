@@ -7,7 +7,7 @@ export default config({
     pathPrefix: "site",
   },
   cloud: {
-    project: "lena/lena",
+    project: "lenihi/site",
   },
   collections: {
     projects: collection({
