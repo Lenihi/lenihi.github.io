@@ -9,10 +9,11 @@ import LinkToTop from "src/components/LinkToTop.astro";
 export type Props = {
   current?: keyof typeof mainRoutes;
   currentSlug?: string;
+  fullWidth?: boolean;
 };
 const { data: config } = await getEntry("settings", "config");
 
-const { current, currentSlug } = Astro.props;
+const { current, currentSlug, fullWidth } = Astro.props;
 ---
 
 <BaseLayout>
@@ -30,7 +31,7 @@ const { current, currentSlug } = Astro.props;
         />
       </a>
     </aside>
-    <main class="flow">
+    <main class="flow" class:list={[fullWidth && "full-width"]}>
       <slot />
     </main>
     <LinkToTop />
@@ -41,9 +42,9 @@ const { current, currentSlug } = Astro.props;
   body {
     display: grid;
     grid-template-columns:
-      [content-start wide-start] 1fr
+      [full-start content-start wide-start] 1fr
       [wide-end content-end aside-start] 3rem
-      [aside-end];
+      [aside-end full-end];
     grid-auto-flow: column;
     padding-inline: var(--space-s);
     padding-block: var(--space-2xl);
@@ -53,13 +54,16 @@ const { current, currentSlug } = Astro.props;
   @media screen and (width>50rem) {
     body {
       grid-template-columns:
-        [wide-start] 3fr [content-start] 75ch
-        [wide-end content-end] 4fr [aside-start] auto;
+        [full-start wide-start] 3fr [content-start] 75ch
+        [wide-end content-end] 4fr [aside-start] auto [aside-end full-end];
     }
   }
   main {
     grid-column: content;
     padding-block-start: var(--space-m);
+  }
+  main.full-width {
+    grid-column: full;
   }
   aside {
     grid-column: aside;
