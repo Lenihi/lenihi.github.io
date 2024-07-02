@@ -4,6 +4,7 @@ import MainLayout from "src/layouts/MainLayout.astro";
 import { mainRoutes } from "src/libs/routes.ts";
 import { getEntry } from "astro:content";
 import PdfLink from "src/components/PdfLink.astro";
+import VimeoEmbed from "src/components/VimeoEmbed.astro";
 
 const about = await getEntry("pages", "about");
 const { Content } = await about.render();
@@ -20,7 +21,7 @@ export const getStaticPaths = (() => {
 ---
 
 <MainLayout current="about" fullWidth>
-  <Content components={{ PdfLink }} />
+  <Content components={{ PdfLink, VimeoEmbed }} />
   <p>Bisous</p>
 </MainLayout>
 

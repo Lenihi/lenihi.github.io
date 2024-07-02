@@ -52,6 +52,15 @@ export default config({
                 }),
               },
             }),
+            VimeoEmbed: inline({
+              label: "Vidéo Vimeo",
+              schema: {
+                videoId: fields.number({
+                  label: "Id de la vidéo",
+                  defaultValue: 0,
+                }),
+              },
+            }),
           },
         }),
       },
@@ -98,6 +107,15 @@ export default config({
                 }),
               },
             }),
+            VimeoEmbed: inline({
+              label: "Vidéo Vimeo",
+              schema: {
+                videoId: fields.number({
+                  label: "Id de la vidéo",
+                  defaultValue: 0,
+                }),
+              },
+            }),
           },
         }),
       },
@@ -137,6 +155,15 @@ export default config({
                 }),
               },
             }),
+            VimeoEmbed: inline({
+              label: "Vidéo Vimeo",
+              schema: {
+                videoId: fields.number({
+                  label: "Id de la vidéo",
+                  defaultValue: 0,
+                }),
+              },
+            }),
           },
         }),
       },
@@ -171,6 +198,15 @@ export default config({
                   publicPath: "/files/about",
                   label: "Fichier",
                   validation: { isRequired: true },
+                }),
+              },
+            }),
+            VimeoEmbed: inline({
+              label: "Vidéo Vimeo",
+              schema: {
+                videoId: fields.number({
+                  label: "Id de la vidéo",
+                  defaultValue: 0,
                 }),
               },
             }),

@@ -3,6 +3,7 @@ import type { GetStaticPaths } from "astro";
 import { getCollection, getEntry } from "astro:content";
 import Pagination from "src/components/Pagination.astro";
 import PdfLink from "src/components/PdfLink.astro";
+import VimeoEmbed from "src/components/VimeoEmbed.astro";
 import MainLayout from "src/layouts/MainLayout.astro";
 import { sort } from "src/libs/collections.ts";
 import { slugify } from "src/libs/string.ts";
@@ -26,5 +27,5 @@ export const getStaticPaths = (async () => {
 <MainLayout current="projects" currentSlug={slug}>
   <Pagination collection="projects" slug={slug} />
   <h1>{data.title}</h1>
-  <Content components={{ PdfLink }} />
+  <Content components={{ PdfLink, VimeoEmbed }} />
 </MainLayout>

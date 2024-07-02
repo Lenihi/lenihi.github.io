@@ -1,0 +1,12 @@
+---
+export type Props = {
+  videoId: string;
+};
+
+const { videoId } = Astro.props;
+---
+
+<lite-vimeo videoid={videoId}></lite-vimeo>
+<script>
+  import "lite-vimeo-embed";
+</script>
