@@ -6,6 +6,6 @@ const home = await getEntry("pages", "home");
 const { Content } = await home.render();
 ---
 
-<MainLayout current="home" fullWidth={true}>
+<MainLayout current="home" fullWidth>
   <Content components={{ PdfLink }} />
 </MainLayout>
