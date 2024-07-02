@@ -1,5 +1,5 @@
 import { config, fields, collection, singleton } from "@keystatic/core";
-import { inline, mark } from "@keystatic/core/content-components";
+import { block, inline, mark } from "@keystatic/core/content-components";
 
 export default config({
   storage: {
@@ -52,7 +52,7 @@ export default config({
                 }),
               },
             }),
-            VimeoEmbed: inline({
+            VimeoEmbed: block({
               label: "Vidéo Vimeo",
               schema: {
                 videoId: fields.number({
@@ -107,7 +107,7 @@ export default config({
                 }),
               },
             }),
-            VimeoEmbed: inline({
+            VimeoEmbed: block({
               label: "Vidéo Vimeo",
               schema: {
                 videoId: fields.number({
@@ -155,7 +155,7 @@ export default config({
                 }),
               },
             }),
-            VimeoEmbed: inline({
+            VimeoEmbed: block({
               label: "Vidéo Vimeo",
               schema: {
                 videoId: fields.number({
@@ -201,7 +201,7 @@ export default config({
                 }),
               },
             }),
-            VimeoEmbed: inline({
+            VimeoEmbed: block({
               label: "Vidéo Vimeo",
               schema: {
                 videoId: fields.number({
