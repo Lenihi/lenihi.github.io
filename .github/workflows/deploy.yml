@@ -28,12 +28,12 @@ jobs:
           # package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
 
   deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+    with:
+      username: ${{secrets.username}}
+      server: "${{ secrets.server }}"
+      password: ${{ secrets.password }}
+      local_path: "./site/dist/*"
+      remote_path: "${{ secrets.dir }}"
+      sftp_only: true
+      port: 22
