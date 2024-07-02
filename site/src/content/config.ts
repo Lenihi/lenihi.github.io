@@ -6,7 +6,7 @@ export const collections = {
     schema: z.object({
       title: z.string(),
       date: z.date(),
-      priority: z.number().optional(),
+      priority: z.number(),
     }),
   }),
   instants: defineCollection({
@@ -14,7 +14,7 @@ export const collections = {
     schema: z.object({
       title: z.string(),
       date: z.date(),
-      priority: z.number().optional(),
+      priority: z.number(),
     }),
   }),
   pages: defineCollection({

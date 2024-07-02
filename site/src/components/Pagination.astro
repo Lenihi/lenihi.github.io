@@ -1,6 +1,7 @@
 ---
 import type { ContentCollectionKey } from "astro:content";
 import { getCollection } from "astro:content";
+import { sort } from "src/libs/collections.ts";
 import { subRoutes } from "src/libs/routes.ts";
 
 export type Props = {
@@ -9,7 +10,7 @@ export type Props = {
 };
 
 const { collection, slug } = Astro.props;
-const projects = await getCollection(collection);
+const projects = sort(await getCollection(collection));
 const currentIndex = projects.findIndex((el) => el.slug === slug);
 const previous = projects[currentIndex - 1]?.slug;
 const next = projects[currentIndex + 1]?.slug;

@@ -1,3 +1,4 @@
+import { sort } from "./collections.ts";
 import { slugify } from "./string";
 import { getCollection, getEntry, type CollectionEntry } from "astro:content";
 
@@ -8,10 +9,10 @@ export const mainRoutes = {
   home: "/",
   about: `/${slugify(navigation.about.url)}`,
   projects: `/${slugify(navigation.projects.url)}/${
-    (await getCollection("projects"))[0].slug
+    sort(await getCollection("projects"))[0].slug
   }`,
   instants: `/${slugify(navigation.instants.url)}/${
-    (await getCollection("instants"))[0].slug
+    sort(await getCollection("instants"))[0].slug
   }`,
 };
 

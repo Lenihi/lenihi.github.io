@@ -1,6 +1,7 @@
 ---
 import { getEntry } from "astro:content";
 import { getCollection } from "astro:content";
+import { sort } from "src/libs/collections.ts";
 import { mainRoutes, subRoutes } from "src/libs/routes.ts";
 
 export type Props = {
@@ -11,8 +12,8 @@ export type Props = {
 const { data: config } = await getEntry("settings", "config");
 
 const { current, currentSlug } = Astro.props;
-const projects = await getCollection("projects");
-const instants = await getCollection("instants");
+const projects = sort(await getCollection("projects"));
+const instants = sort(await getCollection("instants"));
 ---
 
 <header class="top">
