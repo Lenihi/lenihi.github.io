@@ -21,13 +21,11 @@ jobs:
           npm install
           npm run build
 
-      - name: deploy file to server
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          username: ${{secrets.username}}
-          server: "${{ secrets.server }}"
+          server: f ${{ secrets.server }}
+          username: ${{ secrets.password }}
           password: ${{ secrets.password }}
-          local_path: "./site/dist/*"
-          remote_path: "${{ secrets.dir }}"
-          sftp_only: true
-          port: 22
+          locale_dir: site/dist/
+          server_dir: www/
