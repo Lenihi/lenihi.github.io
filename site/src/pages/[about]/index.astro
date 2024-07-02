@@ -19,13 +19,13 @@ export const getStaticPaths = (() => {
 }) satisfies GetStaticPaths;
 ---
 
-<MainLayout current="about">
+<MainLayout current="about" fullWidth>
   <Content components={{ PdfLink }} />
   <p>Bisous</p>
 </MainLayout>
 
 <style>
-  p{
+  p {
     color: blue;
   }
 </style>
